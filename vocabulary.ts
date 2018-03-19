@@ -1,4 +1,4 @@
-interface Vacaulary {
+interface Vocaulary {
     name: string;
     pronunciationUSA: string;
     pronunciationENG:string
