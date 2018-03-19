@@ -3,7 +3,6 @@ interface Vacaulary {
     pronunciationUSA: string;
     pronunciationENG:string
     descripion:string;
-    
 }
 
 
