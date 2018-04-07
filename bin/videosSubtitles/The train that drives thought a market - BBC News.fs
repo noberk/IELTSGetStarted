@@ -1,6 +1,6 @@
 I have benn a train driver for 32 years
 The vendors know when the train comes,
-the station alos annouces via megaphone.
+the station also announces via megaphone.
 The Vendor will move thier goods
 I only worry about tourists 
 I have to observe and make sure there is nobody on the rail track
