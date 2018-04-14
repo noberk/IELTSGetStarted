@@ -898,3 +898,6 @@ lean
 advocate
 absent
 behave
+
+you imagine this picture for maybe tens seconds
+it will help to remember it in the future
