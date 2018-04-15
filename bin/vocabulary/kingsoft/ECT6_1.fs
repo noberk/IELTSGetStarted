@@ -59,8 +59,8 @@ If you adopt someone else's child, you take it into your own family and make it 
 @napkin@
 A napkin is a square of cloth or paper that you use when you are eating to protect your clothes, or to wipe your mouth or hands.
 
-
-
+@drawf
+If one person or thing is dwarfed by another, the second is so much bigger than the first that it makes them look very small.
 +extend
 
 @official@
