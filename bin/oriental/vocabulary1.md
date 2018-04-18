@@ -20,7 +20,7 @@ abb acc add aff app att ass...
 🌳4、 ante - : 前面
 🌳5、 anti- : 返对; 相反
 
-abandon
+💎🔥abandon
 band 带 控制 绑扎
 bind 捆绑
 (1) 群 ,队 
@@ -39,8 +39,8 @@ broadband
 college english test band 4
 
 
-#💎abundant丰富的  abound v.大量存在, 充满  boundary 边界
-##💠examples abound 例子大量存在
+💎abundant丰富的  abound v.大量存在, 充满  boundary 边界
+💠examples abound 例子大量存在
     for instance  举例
     similarly 类似的
     in a nutshell 总结,
@@ -61,7 +61,7 @@ enormous 巨大的
 
 💎aboard
 board 甲板
-boarding pass
+boarding pass 登机证
 
 
 
