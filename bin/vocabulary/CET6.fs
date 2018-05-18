@@ -25,7 +25,7 @@ an extra part that can be used with a machine to make it do a particular job
 @Christian/ˈkrɪstʃən/ 
 [noun] a person who believes in the teaching of Jesus Christ
 @through/ˈθruː/
-[preposition] into one side  and out the other side of something
+[preposition] into one side and out the other side of something
 @except
 @declaration
 @delegate
@@ -35,3 +35,13 @@ an extra part that can be used with a machine to make it do a particular job
 @dwarf
 @preposition/ˌprɛpəˈzɪʃən/[noun]
 a word or a gourp of words that is used with a noun,pronoun,or noun phrase to show direction,location,time,to introduce an object
+
+Although blind people are deficient of sight,they have extra sensitive hearing
+Our city's sheriff is a very strict and responsible man
+It uses adaptive machine learning
+
+A very special Million Dollar Commemorative Bill featuring bruce lee
+All of our bills are printed on high-quality paper for a beautiful presentation
+great care and attention to detail makes this bill a high quality,collectible
+4 color front and back printing with great detail
+same look, feel and size as real money
