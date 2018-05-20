@@ -6,16 +6,27 @@ import { ClickParam } from "../../../../node_modules/antd/lib/menu/index";
 import Weather from "../weather/weather";
 import { StyleAntiCollision } from "../../../tools/stylePrefix";
 import { IntlProvider, FormattedMessage } from 'react-intl';
+
 import './index.less';
+import { RouteLinkAddress } from "../../../tools/config";
 
 
 const menu = (
     <Menu>
-      <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">1st menu item</a>
-      </Menu.Item>
+        <Menu.Item>
+            <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">1st menu item</a>
+        </Menu.Item>
     </Menu>
-  );
+);
+
+const navigationInfo = [
+    { key: "home", icon: "home", name: "Home" },
+    { key: "Email", icon: "mail", name: "Email" },
+    { key: "app", icon: "appstore", name: "App" },
+    { key: "tool", icon: "tool", name: "Setting" },
+    { key: "alipay", icon: "github", name: "Github" },
+    { key: "vacobulary", icon: "heart", name: "Vacobulary", userStyle: { color: "purple" } },
+]
 
 const Search = Input.Search;
 const SubMenu = Menu.SubMenu;
@@ -31,19 +42,27 @@ class Header extends React.Component<any, any> {
             current: 'home',
             name: 'Eric',
             unreadCount: 1000,
-            dropDownVisible:false,
+            dropDownVisible: false,
         }
 
     }
     onChange = (value: React.ChangeEvent<HTMLInputElement>) => {
         console.info(value.target.value)
-        this.setState({dropDownVisible:true })
+        this.setState({ dropDownVisible: true })
     }
 
 
     handleClick = (e: ClickParam) => {
         if (e.key == 'home') {
             location.href = '/';
+        }
+        if (e.key === "vacobulary") {
+            let item = RouteLinkAddress.find(p => p.address === "vacobulary");
+            if (item !== undefined) {
+                location.href = `/${item.path}`;
+            }else{
+                location.href = "/error"
+            }
         }
         this.setState({ current: e.key });
     }
@@ -62,7 +81,7 @@ class Header extends React.Component<any, any> {
                     </div>
                     <div>
                         <Dropdown overlay={menu} placement="bottomLeft">
-                        <Search placeholder="檢索" onChange={this.onChange} className={s.suffix('search')} />     
+                            <Search placeholder="檢索" onChange={this.onChange} className={s.suffix('search')} />
                         </Dropdown>
                         <a href="/#/login">登入</a>
                         <a href="/#/register">註冊</a>
@@ -74,24 +93,7 @@ class Header extends React.Component<any, any> {
                     onClick={this.handleClick}
                     selectedKeys={[this.state.current]}
                     mode="horizontal">
-                    <Menu.Item key="home" >
-                        <Icon type="home" />首頁
-                    </Menu.Item>
-                    <Menu.Item key="mail" >
-                        <Icon type="mail" />寫信
-                    </Menu.Item>
-                    <Menu.Item key="app" >
-                        <Icon type="appstore" />功能
-                   </Menu.Item>
-                    <SubMenu title={<span><Icon type="tool" />設置</span>}>
-                        <MenuItemGroup title="介面">
-                            <Menu.Item key="setting:1">皮膚</Menu.Item>
-                            <Menu.Item key="setting:2">糾錯</Menu.Item>
-                        </MenuItemGroup>
-                    </SubMenu>
-                    <Menu.Item key="alipay">
-                        <Icon type="github" />GITHUB
-                    </Menu.Item>
+                    {navigationInfo.map(val => <Menu.Item key={val.key}> <Icon style={val.userStyle} type={val.icon} />{val.name}</Menu.Item>)}
                 </Menu>
             </div>
         );

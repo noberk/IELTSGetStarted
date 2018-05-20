@@ -2,6 +2,7 @@ import Home from "../routes/home/home";
 import Login from "../routes/login/login";
 import Register from "../routes/register/register";
 import Article from "../routes/article/article";
+import Vocabulary from "../routes/vocabulary/vacobulary";
 import { RouteComponentProps } from "react-router";
 export const $img: string = './resource/images/';
 type RouteType = { name: string, childen?: RouteType[], to: string }
@@ -11,4 +12,5 @@ export const RouteLinkAddress: RouteSimpleType = [
     { key: 2, address: `login`, name: `登陆`, path: `/login`, component: Login },
     { key: 3, address: `register`, name: `注册`, path: `/register`, component: Register },
     { key: 4, address: `article`, name: `文章`, path: `/article`, component: Article },
+    { key: 5, address: `vocabulary`, name: `词汇`, path: `/vocabulary`, component: Vocabulary },
 ]
