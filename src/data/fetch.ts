@@ -1,16 +1,59 @@
+type Transformat = "text" | "image" | undefined;
 
-export async function take<T>(path: string): Promise<T> {
-    try {
-        var response = await fetch(path);
-        return await response.json() as Promise<T>
-    } catch (e) {
-        return new Promise<T>((resovle) => {
-            var fail = {} as T;
+export async function takeText(path: string, transformat: Transformat): Promise<string> {
+
+    var myHeaders = new Headers();
+    if (transformat == "text") {
+        myHeaders.append('Content-Type', 'text/plain');
+        var myInit: RequestInit = {
+            method: 'GET',
+            headers: myHeaders,
+            mode: 'cors',
+            cache: 'default'
+        };
+        var response = await fetch(path, myInit);
+        return await response.text();
+    }else{
+        return new Promise<string>((resovle) => {
             console.log('调用接口失败')
-            console.log(e)
-            resovle(fail);
         });
     }
+
+}
+
+export async function take<T>(path: string): Promise<T>;
+export async function take<T>(path: string, types?: string): Promise<T> {
+    if (types != undefined) {
+        var myHeaders = new Headers();
+        if (types == "text") {
+            myHeaders.append('Content-Type', 'text/plain');
+            var myInit: RequestInit = {
+                method: 'GET',
+                headers: myHeaders,
+                mode: 'cors',
+                cache: 'default'
+            };
+            var response = await fetch(path, myInit);
+            return await response.json() as Promise<T>
+        } else {
+            return new Promise<T>((resovle) => {
+                console.log('调用接口失败')
+            });
+
+        }
+
+    } else {
+        try {
+            var response = await fetch(path);
+            return await response.json() as Promise<T>
+        } catch (e) {
+            return new Promise<T>((resovle) => {
+                console.log('调用接口失败')
+                console.log(e.stack)
+            });
+        }
+    }
+
 }
 
 
@@ -19,6 +62,8 @@ export class DataUrl {
     static readonly keywordsAddress = './data/JsKeyWords.json';
     static readonly weatcherAddress = './data/weatcher.json';
     static readonly articleAddress = './data/article.json';
+    static readonly lession1 = './data/bin/daily/2018年5月11日.cs';
+    static readonly abc = './data/bin/daily/abc.json';
 }
 
 

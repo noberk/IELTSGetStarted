@@ -1,5 +1,3 @@
-
-
 import * as React from "react";
 import { Menu, Icon, Input, Dropdown } from "antd";
 import { ClickParam } from "../../../../node_modules/antd/lib/menu/index";
@@ -20,11 +18,11 @@ const menu = (
 );
 
 const navigationInfo = [
-    { key: "home", icon: "home", name: "Home" },
-    { key: "Email", icon: "mail", name: "Email" },
-    { key: "app", icon: "appstore", name: "App" },
-    { key: "tool", icon: "tool", name: "Setting" },
-    { key: "alipay", icon: "github", name: "Github" },
+    { key: "home", icon: "home", name: "Home", userStyle:{} },
+    { key: "Email", icon: "mail", name: "Email", userStyle:{} },
+    { key: "app", icon: "appstore", name: "App", userStyle:{} },
+    { key: "tool", icon: "tool", name: "Setting" , userStyle:{}},
+    { key: "alipay", icon: "github", name: "Github", userStyle:{} },
     { key: "vocobulary", icon: "heart", name: "Vocabulary", userStyle: { color: "purple" } },
 ]
 

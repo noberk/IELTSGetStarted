@@ -2,7 +2,7 @@ import Home from "../routes/home/home";
 import Login from "../routes/login/login";
 import Register from "../routes/register/register";
 import Article from "../routes/article/article";
-import Vocabulary from "../routes/vocabulary/vacobulary";
+import Vocabulary from "../routes/vocabulary/vocabulary";
 import { RouteComponentProps } from "react-router";
 export const $img: string = './resource/images/';
 type RouteType = { name: string, childen?: RouteType[], to: string }

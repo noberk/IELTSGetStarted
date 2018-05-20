@@ -11,10 +11,7 @@ import { StringBuilder } from "../../tools/stringBuilder";
 import './index.less';
 
 
-const a = new StringBuilder();
-a.append("123");
-a.append(",x");
-console.error(a.value)
+ 
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
