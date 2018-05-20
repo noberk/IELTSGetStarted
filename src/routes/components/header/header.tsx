@@ -6,9 +6,9 @@ import { ClickParam } from "../../../../node_modules/antd/lib/menu/index";
 import Weather from "../weather/weather";
 import { StyleAntiCollision } from "../../../tools/stylePrefix";
 import { IntlProvider, FormattedMessage } from 'react-intl';
+import { getRouteLinkAddress } from "../../../tools/config";
 
 import './index.less';
-import { RouteLinkAddress } from "../../../tools/config";
 
 
 const menu = (
@@ -25,7 +25,7 @@ const navigationInfo = [
     { key: "app", icon: "appstore", name: "App" },
     { key: "tool", icon: "tool", name: "Setting" },
     { key: "alipay", icon: "github", name: "Github" },
-    { key: "vacobulary", icon: "heart", name: "Vacobulary", userStyle: { color: "purple" } },
+    { key: "vocobulary", icon: "heart", name: "Vocabulary", userStyle: { color: "purple" } },
 ]
 
 const Search = Input.Search;
@@ -53,16 +53,11 @@ class Header extends React.Component<any, any> {
 
 
     handleClick = (e: ClickParam) => {
-        if (e.key == 'home') {
+        if (e.key === 'home') {
             location.href = '/';
         }
-        if (e.key === "vacobulary") {
-            let item = RouteLinkAddress.find(p => p.address === "vacobulary");
-            if (item !== undefined) {
-                location.href = `/${item.path}`;
-            }else{
-                location.href = "/error"
-            }
+        if (e.key === "vocobulary") {
+            location.href = '/#/vocabulary';
         }
         this.setState({ current: e.key });
     }

@@ -4,7 +4,7 @@ import Header from "./routes/components/header/header";
 import Footer from "./routes/components/footer/footer";
 import { Router, Route, Switch } from "react-router";
 import * as H from 'history';
-import { RouteLinkAddress, RouteSimpleType } from "./tools/config";
+import { getRouteLinkAddress, RouteSimpleType } from "./tools/config";
 import Login from './routes/login/login';
 import './app.less';
 
@@ -13,7 +13,7 @@ const RouteFor = (address: RouteSimpleType) => {
         if (item.key == 1) {
             return <Route exact key={item.key} path={item.path} component={item.component} ></Route>
         } else {
-            return <Route key={item.key} path={item.path} component={item.component} ></Route>
+            return <Route exact key={item.key} path={item.path} component={item.component} ></Route>
         }
     }
     )
@@ -27,7 +27,7 @@ export default class App extends React.Component {
                 <div>
                     <Header />
                     <Switch>
-                        {RouteFor(RouteLinkAddress)}
+                        {RouteFor(getRouteLinkAddress())}
                     </Switch>
                     <Footer />
                 </div>
