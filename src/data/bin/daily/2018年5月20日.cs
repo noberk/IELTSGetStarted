@@ -33,3 +33,12 @@ you will be astounded
 chipping on the green
 
 
+
+versed   which mean good at something
+contradict  
+the signs contradict each other, which way should we go
+
+in case = just in case  = prepare for
+
+I bought a sandwich in case I get hungry.
+in case I get hungry, I bought a sandwicch
